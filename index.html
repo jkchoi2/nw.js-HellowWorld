@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>nw.js Hellow World</title>
+  <script src="myscript.js"></script>
+</head>
+<body>
+<H2>
+<script>
+// get the system platform using node.js
+var os = require('os');
+document.write('You are running on ', os.platform());
+</script>
+<br><br>
+
+<div style="height: auto; width: 100%; border:1px solid black;">
+<p>'Right click' here to show context menu.</p>
+</div>
+<script>
+// Create an empty context menu
+var menu = new nw.Menu();
+
+// Add some items with label
+menu.append(new nw.MenuItem({
+  label: 'Item A',
+  click: function(){ alert('You have clicked at "Item A"'); }
+}));
+menu.append(new nw.MenuItem({ label: 'Item B' }));
+menu.append(new nw.MenuItem({ type: 'separator' }));
+menu.append(new nw.MenuItem({ label: 'Item C' }));
+
+// Hooks the "contextmenu" event
+document.body.addEventListener('contextmenu', function(ev) {
+  // Prevent showing default context menu
+  ev.preventDefault();
+  // Popup the native context menu at place you click
+  menu.popup(ev.x, ev.y);
+
+  return false;
+}, false);
+</script>  
+<br>
+<button id='btnExit'>exit</button><br>
+<button id='btnDeveloper'>open-inspector-button</button>
+</body>
+</html>
