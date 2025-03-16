@@ -4,11 +4,10 @@
   "description": "",
   "main": "index.html",
   "window": {
+    "show": true,
     "toolbar": true
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "chromium-args": "--enable-logging=stderr"
- 
+  }
 }
