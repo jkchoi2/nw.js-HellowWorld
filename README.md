@@ -1,6 +1,6 @@
 # nw.js-HellowWorld
 
-<img src="./screenShot.png">
+<img src="./screenshot.png">
 
 
 ## Project 생성 절차<br> 
