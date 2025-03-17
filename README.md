@@ -28,6 +28,7 @@ package.json
 }
 ```
 3.index.html
+
 4.myscript.js
 
 ## run program
