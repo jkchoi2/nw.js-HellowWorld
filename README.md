@@ -27,9 +27,10 @@ package.json
   }
 }
 ```
-3.index.html
 
-4.myscript.js
+4.index.html
+
+5.myscript.js
 
 ## run program
 ==================
